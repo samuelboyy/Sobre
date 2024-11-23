@@ -1,0 +1,89 @@
+@import url(./reset.css);
+@import url(./default.css);
+
+/* ----------------  Top Block ---------------- */
+.top-block{
+    width: 100vw;
+    height: 25rem;
+
+    background-image: url(../images/about-top-block.jpg);
+    background-size: cover;
+    background-position: top 60% left 0;
+    background-repeat: no-repeat;
+
+    margin-bottom: 6rem;
+}
+/* ----------------  About start ---------------- */
+
+.about-list{
+    position: relative;
+
+    display: flex;
+    gap: 4rem; /* about-list width */
+
+    width: 84rem; /* 40*2 + 4 */
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+.about-list--bg{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    z-index: -1;
+
+    width: 80%;
+    height: 80%;
+    border-radius: 10%;
+    background-color: var(--orange-100);
+}
+.about-item{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.about-item:nth-child(2){
+    padding-top: 10rem;
+}
+.about-content--wrapper{
+    width: 40rem;  /* about-list width */
+    min-height: 30rem;
+    box-sizing: border-box;
+    padding: 1rem;
+    border: 0.8rem solid var(--orange-500);
+    border-radius: 10rem;
+    background-color: #FFFFFF;
+
+    text-align: left;
+}
+.about-content{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    height: 100%;
+    box-sizing: border-box;
+    padding: 4rem;
+    border: 2px solid var(--orange-300);
+    border-radius: 9rem;
+}
+.about-content h3{
+    font-size: 3.2rem;
+    color: var(--orange-600);    
+}
+.about-content p{
+    font-size: 1.6rem;
+    color: var(--orange-900);
+}
+
+/* -------- Location -------- */
+#location{
+    width: 84rem; /* 40*2 + 4 */
+    margin: 0 auto;
+}
+#location h3{
+    text-align: center;
+}
+#location iframe{
+    width: 100%;
+}
+/* ----------------  About end ---------------- */

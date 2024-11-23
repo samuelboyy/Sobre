@@ -1,0 +1,255 @@
+html{
+    font-size: 10px;
+    scroll-behavior: smooth;
+    scroll-margin-block: center;
+}
+:root{
+    --orange-50: #FEF4EE;
+    --orange-100: #FCE7D8;
+    --orange-200: #F8CCB0;
+    --orange-300: #F3A77E;
+    --orange-400: #EE7949;
+    --orange-500: #EB6538;
+    --orange-600: #DB3F1B;
+    --orange-700: #B52D19;
+    --orange-800: #91261B;
+    --orange-900: #752219;
+    --orange-950: #3F0E0B;
+}
+body{
+    overflow-x: hidden;
+    background-color: #F5F5F5;
+
+    font-family: arial, '微軟正黑體';
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+main{
+    margin-top: 8rem;
+}
+section{
+    width: 90%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    padding: 0 50px;
+    
+    margin: 0 auto;
+    margin-bottom: 4rem;
+}
+
+/* ---------------- Header Start ---------------- */
+header{
+    position: fixed;
+    top: 0;
+    z-index: 100;
+
+    width: 100vw;
+    height: 8rem;
+    box-sizing: border-box;
+    padding: 0 8vw;
+    background-color: var(--orange-500);
+    opacity: 90%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 1200px;
+    margin: 0 auto;
+}
+nav img{
+    height:60px;
+}
+/* --------- Header Menu --------  */
+nav ul{
+    display: flex;
+    align-items: center;
+
+    width:48rem; 
+}
+nav li{
+    width: 12rem;
+    background-color: var(--orange-500);
+}
+nav li > a{
+    display: block;
+
+    height: 8rem; /* header height */
+    box-sizing: border-box;
+    
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 8rem; /* header height */
+    color: white;
+    text-shadow: var(--orange-950) 1px 1px;
+}
+nav li > a:hover{
+    color: var(--orange-800);
+    border-bottom: 0.4rem solid var(--orange-800);
+
+    transition: 0.5s;
+}
+
+/* --------- Sub Menu --------  */
+nav ol{
+    position: absolute;
+    display: none;
+
+    opacity: 0; /* not working */
+}
+nav li:hover > ol{
+    display: block;
+
+    opacity: 100%;  /* not working */
+    transition: 2s;  /* not working */
+}
+nav ol > li{
+    background-color: #FFFFFF;
+}
+nav ol > li a{
+    box-sizing: border-box;
+    border-top: 1px solid #cccccc;
+
+    color: var(--orange-600);
+    text-shadow: none;
+}
+nav ol > li > a:hover{
+    color: var(--orange-800);
+}
+/* ---------------- Header End ---------------- */
+/* ----------------  Footer start ---------------- */
+footer{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 2rem 8vw;
+    background-color: var(--orange-500);
+
+    font-size: 2rem;
+    color: var(--orange-50);
+}
+footer img{
+    height: 6rem;
+    margin: 0 auto;
+}
+footer .footer-menu{
+    display: flex;
+
+    width: 40rem;
+    margin: 0 auto;
+}
+footer .footer-menu li{
+    width: 10rem;
+}
+footer .footer-menu a{
+    font-weight: bold;
+    color: var(--orange-50);
+}
+footer .footer-social{
+    display: flex;
+
+    width: 12rem;
+    margin: 0 auto;
+}
+footer .footer-social li{
+    width: 4rem;
+}
+footer p{
+    font-size: 1.6rem;
+}
+/* ----------------  Footer end ---------------- */
+/* -------- Text Settings -------- */
+h1, h2, h3, h4, h5, h6{
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+}
+/* -------- Title Settings -------- */
+.main-title,
+.main-title_inline{
+    position: relative;
+    display: block;
+
+    width: 100%;
+    
+    font-size: 3.6rem;
+    letter-spacing: 0.4rem;
+    color: var(--orange-600);
+    
+    margin: 4rem 0;
+}
+.main-title::after,
+.main-title_inline::before,
+.main-title_inline::after{
+    content: '';
+    display: block;
+    height: 0.4rem;
+    background-color: var(--orange-600);
+}
+.main-title::after{
+    width: 100%;
+    margin-top: 2rem;
+}
+.main-title_inline::before,
+.main-title_inline::after{
+    position: absolute;    
+    top: calc(1.8rem - 2px);
+
+    width: calc(50% - 15rem);
+}
+.main-title_inline::before{ left: 0; }
+.main-title_inline::after{ right: 0; }
+/* -------- Table Settings -------- */
+table tr{
+    border-bottom: 1px solid var(--orange-500);
+}
+table td{
+    box-sizing: border-box;
+    padding: 10px;
+    color: var(--orange-950);
+}
+
+.wave1{
+    top: 0%;
+}
+.wave2{
+    top: 70vw;
+}
+.wave1,
+.wave2{
+    position: absolute;
+    left: 105%;
+    z-index: -100;
+
+    width: 100vw;
+    height: 100vw;
+    margin-left: -250px;
+    border-radius: 40%;
+    opacity: 0.4;
+    background: var(--orange-300);
+
+    animation: drift 7s infinite linear;
+}
+.wave1.two,
+.wave2.two{
+    animation: drift 9s infinite linear;
+}
+.wave1.three,
+.wave2.three{
+    animation: drift 11s infinite linear;
+    opacity: 0.1;
+}
+@keyframes drift {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}

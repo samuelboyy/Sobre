@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/logo-orange.svg">
+    <title>Menu | Sobre</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script src="./js/general.js" async></script>
+    <script src="./js/menu.js" async></script>
+
+    <link rel="stylesheet" href="./css/menu.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="./index.html"><img src="./images/logo-white_side.svg" alt="sobre-logo"></a>
+            <ul>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./menu.html">Menu</a>
+                    <ol >
+                        <li><a href="./menu.html#coffee">Coffee</a></li>
+                        <li><a href="./menu.html#bakery">Bakery</a></li>
+                        <li><a href="./menu.html#cocktail">CockTails</a></li>
+                        <li><a href="./menu.html#snacks">Snacks</a></li>
+                    </ol>
+                </li>
+                <li><a class href="./latest-news.html">Latest</a></li>
+                <li><a class href="#">Contact</a></li>            
+            </ul>
+        </nav>
+    </header>
+
+    <aside>
+        <ul>
+            <li><a href="#coffee">Coffee</a></li>
+            <li><a href="#bakery">Bakery</a></li>
+            <li><a href="#cocktail">Cocktails</a></li>
+            <li><a href="#cocktail-overall">Cocktails Overall</a></li>
+            <li><a href="#snacks">Snacks</a></li>
+            <li><a href="#snacks-overall">Snacks Overall</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <div class="top-block"></div>
+        <section id="coffee">
+            <h2 class="main-title">COFFEE</h2>
+            <ul id="coffee-list" class="coffee-list">
+                <!-- <li class="coffee-item">
+                    <h3>Special</h3>
+                    <div class="coffee-size">
+                        <p>M</p>
+                        <p>L</p>
+                    </div>
+                    <div class="coffee-content">
+                        <div class="coffee-content--main">
+                            <h4>VIETNAMENESE COFFEE</h4>
+                            <h5>咖啡</h5>
+                        </div>
+                        <div class="coffee-content--price">
+                            <p>100.</p>
+                            <p>100.</p>
+                        </div>
+                    </div>
+                </li> -->
+                <li id="coffee-classic" class="coffee-item">
+                    <h3>Classic</h3>
+                    <div class="coffee-size">
+                        <p>M</p>
+                        <p>L</p>
+                    </div>
+                </li>
+                <li id="coffee-special" class="coffee-item">
+                    <h3>Special</h3>
+                    <div class="coffee-size">
+                        <p>M</p>
+                        <p>L</p>
+                    </div>
+                </li>
+                <li id="coffee-twist" class="coffee-item">
+                    <h3>Twist</h3>
+                    <div class="coffee-size">
+                        <p></p>
+                        <p>S</p>
+                    </div>
+                </li>
+                <li id="coffee-tea" class="coffee-item">
+                    <h3>Tea</h3>
+                    <div class="coffee-size">
+                        <p>M</p>
+                        <p>L</p>
+                    </div>
+                </li>
+                <li id="coffee-others" class="coffee-item">
+                    <h3>Others</h3>
+                    <div class="coffee-size">
+                        <p>M</p>
+                        <p>L</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="bakery">
+            <h2 class="main-title">BAKERY</h2>
+            <ul id="bakery-list" class="bakery-list">
+                <!-- <li class="bakery-item">
+                    <img src="./images/top-block-temp.webp" alt="">
+                    <div class="bakery-content--wrapper">
+                        <div class="bakery-content">
+                            <div class="bakery-content--main">
+                                <h3>BREAD BREAD BREAD BREAD</h3>
+                                <h4>麵包麵包麵包麵包</h4>
+                            </div>
+                            <h5>$00</h5>
+                        </div>
+                    </div>
+                </li> -->
+            </ul>
+        </section>
+        <section id="cocktail">
+            <h2 class="main-title">COCKTAILS</h2>
+            <ul id="cocktail-list" class="cocktail-list">
+                <!-- <li class="cocktail-item">
+                    <div class="cocktail-content">
+                        <div class="cocktail-content--main">
+                            <h3>Pineapple Punch</h3>
+                            <p>
+                                伏特加 / 琴酒 / 蘭姆酒 / 櫻桃<br>
+                                Basil / Grapefruit / Jin Xuan Tea / Gin
+                            </p>
+                        </div>
+                        <div class="cocktail-content--stats">
+                            <h4>$000</h4>
+                            <p class="perc">00%</p>
+                        </div>
+                    </div>
+                    <img src="./images/top-block-temp.webp" alt="">
+                    <h5>No.0</h5>
+                </li> -->
+            </ul>
+            <div class="shots-item">
+                <div class="shots-content">
+                    <h3>Whiskey / Jagermeister / Vodka / Tequila</h3>
+                    <h4>150.</h4>
+                </div>
+                <p>SHOTS BUY 4 GET 1 FREE</p>
+            </div>
+        </section>
+        <section id="cocktail-overall">
+            <h2 class="main-title">COCKTAILS OVERALL</h2>
+            <table id="cocktail-overall-table" class="cocktail-overall-table">
+                <!-- <tr>
+                    <td width="15%">1</td>
+                    <td width="55%">
+                        <h4>Pineapple Punch</h4>
+                        <p>伏特加 / 琴酒 / 蘭姆酒 / 櫻桃</p>
+                    </td>
+                    <td width="15%">00%</td>
+                    <td width="15%">$000</td>
+                </tr> -->
+            </table>
+        </section>
+        <section id="snacks">
+            <h2 class="main-title">SNACKS</h2>
+            <ul id="snacks-list" class="snacks-list">
+                <!-- <li class="snacks-item">
+                    <div class="snacks-content">
+                        <h3>Mentaiko Grilled Chicken Pizza</h3>
+                        <h4>明太子烤雞披薩</h4>
+                    </div>
+                    <h5>160.</h5>
+                </li> -->
+            </ul>
+        </section>
+        <section id="snacks-overall">
+            <h2 class="main-title">SNACKS OVERALL</h2>
+            <table id="snacks-overall-table" class="snacks-overall-table">
+                <!-- <tr>
+                    <td width="15%">1</td>
+                    <td width="70%">
+                        <h4>Mentaiko Grilled Chicken Pizza</h4>
+                        <p>明太子烤雞披薩</p>
+                    </td>
+                    <td width="15%">160.</td>
+                </tr> -->
+            </table>
+        </section>
+        
+    </main>
+    <div class="pizza-slice"></div>
+    <div class="oval"></div>
+    <div class="test"></div>
+
+
+    <footer>
+            <img src="./images/logo-white_side.svg" alt="logo">
+            <ul class="footer-menu">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Latest</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <ul class="footer-social">
+                <li><a hreft="#"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a hreft="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a hreft="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+            </ul>
+            <p>本網站為緯育TibaMe前端工程師班第 103 期學員專題作品，本平台僅供學習、展示之用。</p>
+    </footer>
+
+</body>
+</html>
