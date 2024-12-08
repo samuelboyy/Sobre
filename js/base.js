@@ -159,27 +159,6 @@ $(document).ready(function () {
             }
         })
     })
-
-
-    // Handle click for links on the same page
-    document.addEventListener('click', (event) => {
-        if (event.target.tagName === 'A' && event.target.hash) {
-            event.preventDefault();
-
-            let targetId = event.target.hash.substring(1);
-            let targetElement = document.getElementById(targetId);
-
-            if (targetElement) {
-                let offset = 100;
-                let targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
-
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        }
-    });
 });
 function getScrollY(item) {
     let rect = item.getBoundingClientRect();

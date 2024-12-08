@@ -55,6 +55,7 @@ nav img{
     }
 }
 #scrollTop{
+    cursor: pointer;
     position: fixed;
     bottom: 20px;
     right: 40px;
@@ -269,7 +270,7 @@ nav .submenu li > a:hover{
         background-color: var(--orange-500);
     }
     nav .submenu li{
-        border-bottom: 1px solid var(--orange-200);
+        border-bottom: 1px solid var(--orange-100);
     }
     nav .submenu li a{
         border-top: none;
