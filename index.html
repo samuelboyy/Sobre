@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./images/logo-orange.svg">
-    <title>Sobre</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <link rel="stylesheet" href="./css/index.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./images/logo-orange.svg">
+        <title>Sobre</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <script src="./js/jquery-3.7.1.js"></script>
+        
+        <link rel="stylesheet" href="./css/base.css">
+        <link rel="stylesheet" href="./css/index.css">
+        <link rel="stylesheet" href="./css/index-rwd.css">
+        <script src="./js/base.js"></script>
+        <script src="./js/index.js"></script>
 </head> 
 <body>
-    <header>
+    <header class="headerScroll">
         <nav>
             <a href="./index.html"><img src="./images/logo-white_side.svg" alt="sobre-logo"></a>
             <ul>
                 <li><a href="./about.html">About</a></li>
-                <li><a href="./menu.html">Menu</a>
-                    <ol >
+                <li class="menuWithSubmenu">
+                    <a href="./menu.html">Menu</a>
+                    <div class="subMenu-expandBtn">
+                        <p class="chevron-arrow--bottom"></p>
+                    </div>
+                    <ol class="submenu">
                         <li><a href="./menu.html#coffee">Coffee</a></li>
                         <li><a href="./menu.html#bakery">Bakery</a></li>
                         <li><a href="./menu.html#cocktail">CockTails</a></li>
@@ -26,9 +35,16 @@
                 <li><a class href="./latest-news.html">Latest</a></li>
                 <li><a class href="#">Contact</a></li>            
             </ul>
+            <div id="menuHam">
+                <div class="menuHam-line line1"></div>
+                <div class="menuHam-line line2"></div>
+                <div class="menuHam-line line3"></div>
+            </div>
         </nav>
     </header>
 
+    <div id="pageOverlay"></div>
+    
     <!-- <div class="wave1 one"></div>
     <div class="wave1 two"></div>
     <div class="wave1 three"></div>
@@ -36,72 +52,109 @@
     <div class="wave2 two"></div>
     <div class="wave2 three"></div> -->
 
-
-
     <main>
         <div class="top-block"></div>
         <section id="must">
             <h2 class="main-title_inline">MUST TRY</h2>
-            <ul class="must-list">
-                <li class="must-item">
-                    <div class="must-item-number">
-                        <p>1</p>
-                    </div>
-                    <div class="must-item-content">
-                        <h4>Sober Cloud</h4>
-                        <h5>雲朵咖啡</h5>
-                    </div>
-                    <img src="./images/index-popular1.png" alt="">
-                </li>
-                <li class="must-item">
-                    <div class="must-item-number">
-                        <p>2</p>
-                    </div>
-                    <div class="must-item-content">
-                        <h4>Truffle Salt Bread</h4>
-                        <h5>黑松露鹽麵包</h5>
-                    </div>
-                    <img src="./images/index-popular2.png" alt="">
-                </li>
-                <li class="must-item">
-                    <div class="must-item-number">
-                        <p>3</p>
-                    </div>
-                    <div class="must-item-content">
-                        <h4>Classic Cheese Pizza</h4>
-                        <h5>經典起司披薩</h5>
-                    </div>
-                    <img src="./images/index-popular3.png" alt="">
-                </li>
-            </ul>
+            <div id="mustSlider">
+                <div id="mustSliderLeftBtn">
+                    <p class="chevron-arrow--left"></p>
+                </div>
+                <div class="must-list-wrapper">
+                    <ul class="must-list">
+                        <li class="must-item">
+                            <a href="./menu.html#coffee">
+                                <img src="./images/index-popular1.png" alt="">
+                                <div class="must-item-content">
+                                    <h4>Sober Cloud</h4>
+                                    <p>雲朵咖啡</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="must-item">
+                            <a href="./menu.html#cocktail1">
+                                <img src="./images/menu-cocktail2.png" alt="">
+                                <div class="must-item-content">
+                                    <h4>Jasmine Spritz</h4>
+                                    <p>茉莉花 / 蜂蜜 / 金萱茶 / 琴酒</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="must-item active">
+                            <a href="./menu.html#cocktail2">
+                                <img src="./images/menu-cocktail3.png" alt="">
+                                <div class="must-item-content">
+                                    <h4>Rabbit Fruit</h4>
+                                    <p>梨子 / 莓果 / 香草 / 伏特加</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="must-item">
+                            <a href="./menu.html#cocktail">
+                                <img src="./images/menu-cocktail1.png" alt="">
+                                <div class="must-item-content">
+                                    <h4>Rose Sour</h4>
+                                    <p>玫瑰 / 覆盆子 / 榛果 / 伏特加</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="must-item">
+                            <a href="./menu.html#bakeryPistachioCreamCheeseSaltBread">
+                                <img src="./images/index-popular2.png" alt="">
+                                <div class="must-item-content">
+                                    <h4>Truffle Salt Bread</h4>
+                                    <p>黑松露鹽麵包</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="mustSliderRightBtn">
+                    <p class="chevron-arrow--right"></p>
+                </div>
+            </div>
         </section>
         <section id="new">
             <h2 class="main-title_inline">WHAT'S NEW</h2>
             <ul class="new-list">
-                <img class="vector vector-left" src="./images/icon-chevron.png" alt="">
                 <li class="new-item">
-                    <img src="./images/menu-cocktail1.png" alt="">
-                    <div class="new-item-content">
-                        <h4>Rose Sour</h4>
-                        <p>玫瑰 / 覆盆子 / 榛果 / 伏特加</p>
-                    </div>
+                    <a href="./menu.html#coffee">
+                        <img src="./images/index-popular1.png" alt="">
+                        <div class="new-item-number">
+                            <p>1</p>
+                        </div>
+                        <div class="new-item-content">
+                            <h4>Sober Cloud</h4>
+                            <h5>雲朵咖啡</h5>
+                        </div>
+                    </a>
                 </li>
                 <li class="new-item">
-                    <img src="./images/menu-cocktail2.png" alt="">
-                    <div class="new-item-content">
-                        <h4>Jasmine Spritz</h4>
-                        <p>茉莉花 / 蜂蜜 / 金萱茶 / 琴酒</p>
-                    </div>
+                    <a href="./menu.html#bakeryPistachioCreamCheeseSaltBread">
+                        <img src="./images/index-popular2.png" alt="">
+                        <div class="new-item-number">
+                            <p>2</p>
+                        </div>
+                        <div class="new-item-content">
+                            <h4>Truffle Salt Bread</h4>
+                            <h5>黑松露鹽麵包</h5>
+                        </div>
+                    </a>
                 </li>
                 <li class="new-item">
-                    <img src="./images/menu-cocktail3.png" alt="">
-                    <div class="new-item-content">
-                        <h4>Rabbit Fruit</h4>
-                        <p>梨子 / 莓果 / 香草 / 伏特加</p>
-                    </div>
+                    <a href="./menu.html#snacks">
+                        <img src="./images/index-popular3.png" alt="">
+                        <div class="new-item-number">
+                            <p>3</p>
+                        </div>
+                        <div class="new-item-content">
+                            <h4>Classic Cheese Pizza</h4>
+                            <h5>經典起司披薩</h5>
+                        </div>
+                    </a>
                 </li>
-                <img class="vector vector-right" src="./images/icon-chevron.png" alt="">
             </ul>
+            <a class="go-menu" href="./menu.html">More</a>
         </section>
         <section id="faq">
             <img src="./images/top-block-temp.webp" alt="">
@@ -116,7 +169,9 @@
             <h2 class="main-title_inline">TIPS</h2>
             <h3>來 Sobre 必須體驗的 5 件事情</h3>
             <ul class="tips-list">
-                <img class="arrow-left" src="./images/icon-arrow.png" alt="">
+                <div class="curve-arrow--left">
+                    <p class="curve-arrow"></p>
+                </div>
                 <li class="tips-item">
                     <h4>18寸披薩挑戰</h4>
                     <h4>交一些新朋友</h4>
@@ -128,7 +183,9 @@
                     <h4>飛機餅乾好好吃</h4>
                     <h4>挑個周邊商品</h4>
                 </li>
-                <img class="arrow-right" src="./images/icon-arrow.png" alt="">
+                <div class="curve-arrow--right">
+                    <p class="curve-arrow"></p>
+                </div>
             </ul>
         </section>
         <section id="reach">
@@ -139,20 +196,17 @@
 
     </main>
 
+    <div id="scrollTop" href="#top">
+        <p class="chevron-arrow--top"></p>
+    </div>
     <footer>
-            <img src="./images/logo-white_side.svg" alt="logo">
-            <ul class="footer-menu">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Latest</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <ul class="footer-social">
-                <li><a hreft="#"><i class="fa-brands fa-facebook"></i></a></li>
-                <li><a hreft="#"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a hreft="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-            </ul>
-            <p>本網站為緯育TibaMe前端工程師班第 103 期學員專題作品，本平台僅供學習、展示之用。</p>
+        <img src="./images/logo-white_side.svg" alt="logo">
+        <ul class="footer-social">
+            <li><a hreft="#"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a hreft="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a hreft="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+        </ul>
+        <p>本網站為緯育TibaMe前端工程師班學員專題作品，本平台僅供學習、展示之用。</p>
     </footer>
 
 </body>

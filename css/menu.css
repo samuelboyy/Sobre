@@ -1,8 +1,5 @@
-@import url(./reset.css);
-@import url(./default.css);
-
 aside{
-    position: fixed;
+    position: sticky;
     top: 33rem;
 
     font-size: 1.6rem;
@@ -11,6 +8,7 @@ aside{
 }
 aside li{
     border-bottom: 1px solid var(--orange-500);
+    width: 20rem;
 }
 aside li a{
     display: block;
@@ -42,11 +40,15 @@ aside li a:hover{
     position: relative;
 
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 8rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8rem 8rem;
 
-    width: 92rem; /* 42*2 + 8 */
+    width: 100%;
+    max-width: 92rem;
+    max-height: 140rem;
     margin: 0 auto;
     margin-top: 10rem;
 }
@@ -69,15 +71,19 @@ aside li a:hover{
     flex-direction: column;
     gap: 2rem;
 
-    width: 42rem;
+    width: calc(50% - 4rem);
+    max-width: 42rem;
     box-sizing: border-box;
     padding: 2rem;
     border: 0.3rem solid var(--orange-500);
+    border-radius: 8px;
     background-color: #FFFFFF;
     
     font-size: 1.6rem;
     color: var(--orange-950);
     text-align: left;
+
+    transition-duration: .5s;
 }
 .coffee-item h3{
     position: absolute;
@@ -86,6 +92,7 @@ aside li a:hover{
 
     width: 25rem;
     height: 8rem;
+    border-radius: 8px;
     background-color: var(--orange-800);
     
     font-size: 3.2rem;
@@ -93,6 +100,10 @@ aside li a:hover{
     line-height: 8rem;
     text-align: center;
     color: var(--orange-100);
+}
+.coffee-item:hover{
+    transform: translateY(-15px);
+    box-shadow: var(--boxShadow);
 }
 .coffee-size, .coffee-content--price{
     display: flex;
@@ -128,19 +139,35 @@ aside li a:hover{
 .bakery-list{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     gap: 4rem;
 }
 .bakery-item{
     display: flex;
     gap: 4rem;
     
+    width: 100%;
+    max-width: 95rem;
     justify-content: center;
+
 }
 .bakery-item img{
     width: 40rem;
-    height: 30rem;
     border-radius: 4rem;
+    transition-duration: .5s;
+}
+.bakery-item:hover img{
+    transform: translateY(-15px);
+    box-shadow: var(--boxShadow);
+}
+.bakery-content--wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    
+    flex-grow: 1;
+    box-sizing: border-box;
+    padding: 2rem 0;
 }
 .bakery-item:nth-child(odd) img{
     order: 1;
@@ -159,15 +186,6 @@ aside li a:hover{
     
     padding-left: 3.2rem;
     border-left: 1rem solid var(--orange-500);
-}
-.bakery-content--wrapper{
-    display: flex;
-    flex-direction: column;
-    gap: 1.6rem;
-    
-    min-width: 50rem; 
-    box-sizing: border-box;
-    padding-top: 2rem;
 }
 .bakery-content{
     display: flex;
@@ -202,39 +220,51 @@ aside li a:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    justify-content: center;
+    gap: 4rem;
+    width: 100%;
 
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 .cocktail-item{
     position: relative;
-    
-    width: 76rem;
-    height: 28rem;
+     
+    display: flex;
+    align-items: end;
+
+    width: 100%;
+    max-width: 64rem;
+
+    opacity: 1;
+    transition-duration: .5s;
 }
-.cocktail-item::before{
-    content: '';
-    width: 8rem;
-    height: 26rem;
-    background-color: var(--orange-500);
+.cocktail-item.noShow{
+    opacity: 0;
+}
+.cocktail-item:hover .cocktail-content,
+.cocktail-item:hover img{
+    transform: translateY(-10px);
+    box-shadow: var(--boxShadow);
 }
 .cocktail-item img{
+    position: relative;
+    z-index: 3;
+
     width: 20rem;
-    height: 20rem;
-}
-.cocktail-item h5{
-    font-size: 9.6rem;
-    color: var(--orange-300);
+    border-radius: 8px;
+    transition-duration: .5s;
 }
 .cocktail-content{
     display: flex;
     justify-content: space-between;
 
-    width: 56rem;
-    padding: 2rem 5rem;
+    width: 100%;
+    padding: 2rem 2rem;
     box-sizing: border-box;
-    border-radius: 1rem;
-    
+    border-radius: 8px;
+    background: linear-gradient(90deg, var(--orange-100) 0%, var(--orange-200) 100%);
+    transition: all .5s;
+
     text-align: left;
 }
 .cocktail-content--main,
@@ -268,53 +298,17 @@ aside li a:hover{
     font-size: 1.6rem;
     color: var(--orange-600);
 }
-.cocktail-item:nth-child(odd)::before{
+.cocktail-item h5{
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 7.2rem;
+    left: 20rem;
+    z-index: -1;
+    font-size: 8rem;
+    color: var(--orange-300);
+    transition: all .5s;
 }
-.cocktail-item:nth-child(even)::before{
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-.cocktail-item:nth-child(odd) img{
-    position: absolute;
-    top: 0;
-    left: 4rem;
-}
-.cocktail-item:nth-child(even) img{
-    position: absolute;
-    bottom: 0;
-    right: 4rem;
-}
-.cocktail-item:nth-child(odd) h5{
-    position: absolute;
-    top: 4.8rem;
-    right: -4.8rem;
-    transform: rotate(90deg);
-}
-.cocktail-item:nth-child(even) h5{
-    position: absolute;
-    bottom: 4.8rem;
-    left: -4.8rem;
-    transform: rotate(-90deg);
-}
-.cocktail-item:nth-child(odd) .cocktail-content{
-    position: absolute;
-    bottom: 4rem;
-    left: 14rem;
-    
-    padding-left: 12rem;
-    background: linear-gradient(90deg, var(--orange-100) 0%, var(--orange-200) 100%);
-}
-.cocktail-item:nth-child(even) .cocktail-content{
-    position: absolute;
-    top: 4rem;
-    right: 14rem;
-    
-    padding-right: 12rem;
-    background: linear-gradient(-90deg, var(--orange-100) 0%, var(--orange-200) 100%);
+.cocktail-item:hover h5{
+    bottom: 12rem;
 }
 /* -------- Shots -------- */
 .shots-item{
@@ -322,7 +316,8 @@ aside li a:hover{
     flex-direction: column;
     gap: 2rem;
 
-    width: 60rem;
+    width: 100%;
+    max-width: 60rem;
     box-sizing: border-box;
     padding: 2rem 0 2rem 4rem;
     border-left: 1.6rem solid var(--orange-500);
@@ -340,7 +335,7 @@ aside li a:hover{
     justify-content: space-between;
 }
 .shots-content h3{
-    width: 46rem;
+    /* width: 46rem; */
 
     font-size: 3.2rem;
     text-transform: uppercase;
@@ -352,7 +347,8 @@ aside li a:hover{
 }
 /* -------- Cocktail Overall -------- */
 .cocktail-overall-table{
-    width: 80rem;
+    width: 100%;
+    max-width: 80rem;
     margin: 0 auto;
 
     font-size: 1.6rem;
@@ -377,24 +373,26 @@ aside li a:hover{
     align-items: center;
     gap: 4rem;
 
-    width: 85.6rem;
+    width: 100%;
+    max-width: 85.6rem;
     margin: 0 auto;
 }
 .snacks-item{
     display: flex;
     justify-content: space-between;
 
-    width: 40.8rem;
+    width: calc(50% - 2rem);  
+    max-width: 40.8rem;
     box-sizing: border-box;
     text-align: left;
 }
-.fries{
+.snacks-item.fries{
     padding: 0;
     padding-bottom: 2rem;
     margin-top: 4rem;
     border-bottom: 0.4rem solid var(--orange-500);
 }
-.pizza{
+.snacks-item.pizza{
     height: 19rem;
     padding-top: 12rem;
     position: relative;
@@ -402,7 +400,7 @@ aside li a:hover{
 .pizza::before{
     content:'';
     position: absolute;
-    left: 10rem;
+    right: 14rem;
     top: -6rem;
     z-index: -20;
     transform: rotate(259deg);
@@ -435,7 +433,8 @@ aside li a:hover{
 
 /* -------- Snacks Overall -------- */
 .snacks-overall-table{
-    width: 80rem;
+    width: 100%;
+    max-width: 80rem;
     margin: 0 auto;
 
     font-size: 1.6rem;

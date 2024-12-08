@@ -1,75 +1,13 @@
-@import url(./reset.css);
-@import url(./default.css);
-
 /* ----------------  Top Block ---------------- */
 .top-block{
     width: 100vw;
     height: 25rem;
 
-    background-image: url(../images/main.png);
+    background-image: url(../images/about-top-block.png);
     background-size: cover;
-    background-position: bottom 40% right 0;
+    background-position: top 50% right 0;
     background-repeat: no-repeat;
 
     margin-bottom: 6rem;
 }
 /* ----------------  About start ---------------- */
-#news .main-title{
-    margin-bottom: 2rem;
-}
-.news-list{
-    display: flex;
-    flex-direction: column;
-}
-.news-item{
-    display: flex;
-    gap: 2rem;
-
-    width: 100%;
-    padding: 2rem 1rem;
-    border-bottom: 1px solid var(--orange-500);
-    margin-bottom: 2rem;
-}
-.news-item img{
-    width: 24rem;
-    height: 16rem;
-    border-radius: 2rem;
-}
-.news-content{
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 1.2rem;
-
-    text-align: left;
-}
-.news-content h4{
-    font-size: 2rem;
-    color: var(--orange-600);
-
-    margin-bottom: 2rem;
-}
-.news-content p{
-    font-size: 1.6rem;
-    color: var(--orange-950);
-}
-.news-pages{
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-
-    margin-top: 2rem;
-}
-.news-pages a{
-    display: block;
-    width: 6rem;
-    height: 6rem;
-    border-radius: 50%;
-    background: linear-gradient(180deg, var(--orange-400) 0%, var(--orange-600) 100%);
-
-    font-size: 2.8rem;
-    line-height: 6rem;
-    color: var(--orange-50);
-}

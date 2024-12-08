@@ -6,20 +6,26 @@
     <link rel="icon" href="./images/logo-orange.svg">
     <title>Menu | Sobre</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="./js/jquery-3.7.1.js"></script>
 
-    <script src="./js/general.js" async></script>
-    <script src="./js/menu.js" async></script>
-
+    <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/menu-rwd.css">
+    <script src="./js/base.js"></script>
+    <script src="./js/data.js"></script>
 </head>
 <body>
-    <header>
+    <header class="headerScroll">
         <nav>
             <a href="./index.html"><img src="./images/logo-white_side.svg" alt="sobre-logo"></a>
             <ul>
                 <li><a href="./about.html">About</a></li>
-                <li><a href="./menu.html">Menu</a>
-                    <ol >
+                <li class="menuWithSubmenu">
+                    <a href="./menu.html">Menu</a>
+                    <div class="subMenu-expandBtn">
+                        <p class="chevron-arrow--bottom"></p>
+                    </div>
+                    <ol class="submenu">
                         <li><a href="./menu.html#coffee">Coffee</a></li>
                         <li><a href="./menu.html#bakery">Bakery</a></li>
                         <li><a href="./menu.html#cocktail">CockTails</a></li>
@@ -29,10 +35,17 @@
                 <li><a class href="./latest-news.html">Latest</a></li>
                 <li><a class href="#">Contact</a></li>            
             </ul>
+            <div id="menuHam">
+                <div class="menuHam-line line1"></div>
+                <div class="menuHam-line line2"></div>
+                <div class="menuHam-line line3"></div>
+            </div>
         </nav>
     </header>
 
-    <aside>
+    <div id="pageOverlay"></div>
+    
+    <!-- <aside>
         <ul>
             <li><a href="#coffee">Coffee</a></li>
             <li><a href="#bakery">Bakery</a></li>
@@ -41,8 +54,8 @@
             <li><a href="#snacks">Snacks</a></li>
             <li><a href="#snacks-overall">Snacks Overall</a></li>
         </ul>
-    </aside>
-
+    </aside> -->
+    
     <main>
         <div class="top-block"></div>
         <section id="coffee">
@@ -122,21 +135,21 @@
         <section id="cocktail">
             <h2 class="main-title">COCKTAILS</h2>
             <ul id="cocktail-list" class="cocktail-list">
-                <!-- <li class="cocktail-item">
-                    <div class="cocktail-content">
-                        <div class="cocktail-content--main">
+                <!-- <li class="n-cocktail-item">
+                    <div class="n-cocktail-content">
+                        <div class="n-cocktail-content--main">
                             <h3>Pineapple Punch</h3>
                             <p>
                                 伏特加 / 琴酒 / 蘭姆酒 / 櫻桃<br>
                                 Basil / Grapefruit / Jin Xuan Tea / Gin
                             </p>
                         </div>
-                        <div class="cocktail-content--stats">
+                        <div class="n-cocktail-content--stats">
                             <h4>$000</h4>
                             <p class="perc">00%</p>
                         </div>
                     </div>
-                    <img src="./images/top-block-temp.webp" alt="">
+                    <img src="./images/menu-cocktail1.png" alt="">
                     <h5>No.0</h5>
                 </li> -->
             </ul>
@@ -189,26 +202,21 @@
         </section>
         
     </main>
-    <div class="pizza-slice"></div>
-    <div class="oval"></div>
-    <div class="test"></div>
-
-
+    
+    <div id="scrollTop" href="#top">
+        <p class="chevron-arrow--top"></p>
+    </div>
     <footer>
-            <img src="./images/logo-white_side.svg" alt="logo">
-            <ul class="footer-menu">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Latest</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <ul class="footer-social">
-                <li><a hreft="#"><i class="fa-brands fa-facebook"></i></a></li>
-                <li><a hreft="#"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a hreft="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-            </ul>
-            <p>本網站為緯育TibaMe前端工程師班第 103 期學員專題作品，本平台僅供學習、展示之用。</p>
+        <img src="./images/logo-white_side.svg" alt="logo">
+        <ul class="footer-social">
+            <li><a hreft="#"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a hreft="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a hreft="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+        </ul>
+        <p>本網站為緯育TibaMe前端工程師班學員專題作品，本平台僅供學習、展示之用。</p>
     </footer>
 
+    <script src="./js/menu.js"></script>
+    
 </body>
 </html>

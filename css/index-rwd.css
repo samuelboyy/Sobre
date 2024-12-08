@@ -1,0 +1,114 @@
+/* ----------------  Must start ---------------- */
+@media (width <= 600px){
+    .must-item{
+        width: 20rem;
+    }
+    .must-item img{
+        height: 20rem;
+    }
+}
+@media (width <= 550px){
+    #mustSliderLeftBtn,
+    #mustSliderRightBtn{
+        position: absolute;
+        z-index: 5;
+        background-color: var(--orange-100);
+        opacity: .2;
+    }
+    #mustSliderLeftBtn{
+        left: 0;
+    }
+    #mustSliderRightBtn{
+        right: 0;
+    }
+    #mustSliderLeftBtn:active,
+    #mustSliderRightBtn:active{
+        opacity: 1;
+    }
+    .must-list-wrapper{
+        width: 100%;
+    }
+}
+/* ----------------  Must end ---------------- */
+/* ----------------  New start ---------------- */
+@media (width <= 1100px){
+    .new-list{
+        max-width: 54rem;
+        justify-content: start;
+    }
+}
+@media (width <= 700px){
+    .new-list{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* ----------------  New end ---------------- */
+/* ----------------  FAQ start ---------------- */
+@media (width <= 630px){
+    #faq{
+        display: flex;
+        flex-direction: column;
+
+        height: auto;
+        padding: 0;
+        margin-top: 6rem;
+        background: transparent;
+    }
+    #faq img{
+        position: static;
+        order: 2;
+
+        width: 100%;
+        min-width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+    #faq .faq-content{
+        position: static;
+        order: 1;
+
+        width: 100vw;
+        padding: 20px;
+        background-color: var(--orange-500);
+    }
+    #faq .faq-content h3{
+        padding-right: 10%;
+
+        color: var(--orange-200);
+        text-shadow: none;
+    }
+    #faq .faq-content p{
+        padding-left: 10%;
+    }
+}
+/* ----------------  FAQ end ---------------- */
+/* ----------------  Tips start ---------------- */
+@media (width <= 1024px){
+    .tips-list .curve-arrow--left,
+    .tips-list .curve-arrow--right{
+        display: none;
+    }
+}
+@media (width <= 550px){
+    #tips h3{
+        font-size: 2.4rem;
+    }
+    .tips-item h4{
+        font-size: 2rem;
+    }
+}
+@media (width <= 450px){
+    .tips-item h4{
+        font-size: 1.6rem;
+    }
+
+}
+/* ----------------  Tips end ---------------- */
+/* ----------------  Reach start ---------------- */
+@media (width <= 550px){
+    #reach p{
+        font-size: 2.4rem;
+    }
+}
+/* ----------------  Reach end ---------------- */

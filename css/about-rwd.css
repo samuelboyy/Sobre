@@ -1,0 +1,49 @@
+@media (width <= 900px){
+    .about-list{
+        flex-direction: column;
+        max-width: 80rem;
+    }
+    .about-item{
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+    .about-item:last-child{
+        height: 500px;
+    }
+    .about-item .openHours{
+        width: 100%;
+    }
+    .about-item:first-child .about-content-wrapper:not(.openHours){
+        width: calc(50% - 1rem);
+    }
+    .about-content-wrapper{
+        padding: 1rem;
+        border: 0.8rem solid var(--orange-500);
+    }
+    .about-content-wrapper:hover{
+        border-radius: 4rem;
+    }
+    .about-content{
+        padding: 1.2rem 2rem;
+    }
+    .about-content p{
+        text-align: center;
+        line-height: 1.6;
+    }
+    .location.about-content-wrapper{
+        width: 100%;
+    }
+}
+@media (width <= 660px){
+    .about-item:first-child .about-content-wrapper:not(.openHours){
+        width: 100%;
+    }
+    .about-content{
+        padding: 2rem;
+    }
+    .about-content-wrapper:hover .about-content{
+        padding: 2rem;
+    }
+}

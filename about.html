@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./images/logo-orange.svg">
-    <title>About Us | Sobre</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./images/logo-orange.svg">
+        <title>About Us | Sobre</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <script src="./js/jquery-3.7.1.js"></script>
 
-    <link rel="stylesheet" href="./css/about.css">
+        <link rel="stylesheet" href="./css/base.css">
+        <link rel="stylesheet" href="./css/about.css">
+        <link rel="stylesheet" href="./css/about-rwd.css">
+        <script src="./js/base.js"></script>
+        <script src="./js/about.js"></script>
 </head>
 <body>
-    <header>
+    <header class="headerScroll">
         <nav>
             <a href="./index.html"><img src="./images/logo-white_side.svg" alt="sobre-logo"></a>
             <ul>
                 <li><a href="./about.html">About</a></li>
-                <li><a href="./menu.html">Menu</a>
-                    <ol >
+                <li class="menuWithSubmenu">
+                    <a href="./menu.html">Menu</a>
+                    <div class="subMenu-expandBtn">
+                        <p class="chevron-arrow--bottom"></p>
+                    </div>
+                    <ol class="submenu">
                         <li><a href="./menu.html#coffee">Coffee</a></li>
                         <li><a href="./menu.html#bakery">Bakery</a></li>
                         <li><a href="./menu.html#cocktail">CockTails</a></li>
@@ -26,70 +35,81 @@
                 <li><a class href="./latest-news.html">Latest</a></li>
                 <li><a class href="#">Contact</a></li>            
             </ul>
+            <div id="menuHam">
+                <div class="menuHam-line line1"></div>
+                <div class="menuHam-line line2"></div>
+                <div class="menuHam-line line3"></div>
+            </div>
         </nav>
     </header>
 
+    <div id="pageOverlay"></div>
+    
     <main>
         <div class="top-block"></div>
         <section id="about">
             <h2 class="main-title">ABOUT US</h2>
             <ul class="about-list">
-                <div class="about-list--bg"></div>
                 <li class="about-item">
-                    <div class="about-content--wrapper">
+                    <div class="about-content-wrapper openHours">
+                        <p class="about-border--topRight"></p>
                         <div class="about-content">
                             <h3>Opening Hours</h3>
                             <p>每週</p>
                             <p>8am - 6pm<br>COFFEE / CRAFT BEER</p>            
                             <p>6pm - 2am<br>COCKTAIL / CRAFT BEER / PIZZA</p>
                         </div>
+                        <p class="about-border--bottomLeft"></p>
                     </div>  
-                </li>
-                <li class="about-item">
-                    <div class="about-content--wrapper">
+                    <div class="about-content-wrapper">
+                        <p class="about-border--topRight"></p>
                         <div class="about-content">
                             <h3>1 店 DJ LIST</h3>
                             <p>8/23 (FRI)<br>KUSH / LIL’JO /JYT</p>
                             <p>8/24 (SAT)<br>CHAOYONG / LIL’JO /JYT</p>            
                             <p>8/25 (SUN)<br>CHAOYONG / LIL’JO</p>
                         </div>
+                        <p class="about-border--bottomLeft"></p>
                     </div>
-                    <div class="about-content--wrapper">
+                    <div class="about-content-wrapper">
+                        <p class="about-border--topRight"></p>
                         <div class="about-content">
                             <h3>2 店 DJ LIST</h3>
                             <p>8/23 (FRI)<br>JYT / CHAOYONG /LIL’JO</p>
                             <p>8/24 (SAT)<br>JYT / PEPSI / LIL’JO</p>            
                             <p>8/25 (SUN)<br>LIL’JO / JOSHY</p>
                         </div>
+                        <p class="about-border--bottomLeft"></p>
+                    </div>
+                </li>
+                <li class="about-item">
+                    <div class="about-content-wrapper location">
+                        <p class="about-border--topRight"></p>
+                        <div class="about-content">
+                            <h3>Location</h3>
+                            <p>台北市信義區松壽路20號</p>
+                            <p>1F, No.20, SongShou Rd., Xinyi Dist., Taipei, Taiwan</p>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.966669140581!2d121.56487537543028!3d25.03520517781562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab839713726d%3A0x830df9a4a46a72dd!2sFake%20Sober%20Taipei!5e0!3m2!1szh-TW!2stw!4v1732081649184!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <p class="about-border--bottomLeft"></p>
                     </div>
                 </li>
             </ul>
-            <div id="location" class="about-content--wrapper">
-                <div class="about-content">
-                    <h3>Location</h3>
-                    <p>台北市信義區松壽路20號</p>
-                    <p>1F, No.20, SongShou Rd., Xinyi Dist., Taipei, Taiwan</p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.966669140581!2d121.56487537543028!3d25.03520517781562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab839713726d%3A0x830df9a4a46a72dd!2sFake%20Sober%20Taipei!5e0!3m2!1szh-TW!2stw!4v1732081649184!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
         </section>    
     </main>
-
+    
+    <div id="scrollTop" href="#top">
+        <p class="chevron-arrow--top"></p>
+    </div>
     <footer>
-            <img src="./images/logo-white_side.svg" alt="logo">
-            <ul class="footer-menu">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Latest</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <ul class="footer-social">
-                <li><a hreft="#"><i class="fa-brands fa-facebook"></i></a></li>
-                <li><a hreft="#"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a hreft="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-            </ul>
-            <p>本網站為緯育TibaMe前端工程師班第 103 期學員專題作品，本平台僅供學習、展示之用。</p>
+        <img src="./images/logo-white_side.svg" alt="logo">
+        <ul class="footer-social">
+            <li><a hreft="#"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a hreft="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a hreft="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+        </ul>
+        <p>本網站為緯育TibaMe前端工程師班學員專題作品，本平台僅供學習、展示之用。</p>
     </footer>
-
+    
 </body>
 </html>

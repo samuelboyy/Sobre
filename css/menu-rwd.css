@@ -1,0 +1,159 @@
+/* ----------------  Coffee start ---------------- */
+@media (width <= 880px){
+    .coffee-list{
+        max-height: none;
+    }
+    .coffee-item{
+        width: 100%;
+    }
+    .coffee-item h3{
+        left: calc(50% - 9rem);
+        top: -4.4rem;
+
+        width: 18rem;
+        height: 6rem;
+
+        font-size: 2.4rem;
+        line-height: 6rem;
+    }
+}
+@media (width <= 500px){
+    .coffee-content--main h4 {
+        font-size: 1.6rem;
+    }
+}
+@media (width <= 450px){
+    .coffee-content--main{
+        width: 100%;
+        max-width: 190px;
+    }
+}
+/* ----------------  Coffee end ---------------- */
+/* ----------------  Bakery start ---------------- */
+@media (width <= 950px){
+    .bakery-item{
+        flex-direction: column;
+        align-items: center;
+        gap: 1.6rem;
+    }
+    .bakery-item img{
+        width: 100%;
+        max-width: 500px;
+    }
+    .bakery-content--wrapper{
+        flex-grow: 0;
+        width: 100%;
+        max-width: 50rem;
+    }
+    .bakery-item:nth-child(odd) .bakery-content--wrapper {
+        padding: 1.6rem;
+        border-left: 8px solid var(--orange-500);
+        border-right: 8px solid var(--orange-500);
+    }
+    .bakery-item:nth-child(even) img{
+        order: 1;
+    }
+    .bakery-item:nth-child(even) .bakery-content--wrapper {
+        order: 2;
+        padding: 1.6rem;
+        border-left: 8px solid var(--orange-500);
+        border-right: 8px solid var(--orange-500);
+    }
+}
+@media(width <= 500px){
+    .bakery-item:nth-child(odd) .bakery-content--wrapper {
+
+        border-left: 4px solid var(--orange-500);
+        border-right: 4px solid var(--orange-500);
+    }
+    .bakery-item:nth-child(even) .bakery-content--wrapper {
+        border-left: 4px solid var(--orange-500);
+        border-right: 4px solid var(--orange-500);
+    }
+    .bakery-content--main h3{
+        font-size: 1.6rem;
+    }
+}
+/* ----------------  Bakery end ---------------- */
+/* ----------------  Cocktail start ---------------- */
+@media(width <= 700px){
+    .cocktail-item{
+        flex-direction: column;
+        align-items: start;
+    }
+}
+@media (width <= 500px){
+    .cocktail-content{
+        flex-direction: column;
+
+        width: 100%;
+        height: 20rem;
+    }
+    .cocktail-content--stats{
+        flex-direction: row;
+        text-align: left;
+    }
+    .cocktail-content--stats h4{
+        order: 2;
+        font-size: 16px;
+    }
+    .cocktail-content--stats p{
+        order: 1;
+        gap: 2rem;
+        font-weight: bold;
+        color: var(--orange-950);
+    }
+}
+/* -------- Shots -------- */
+@media (width <= 700px){
+    .shots-item{
+        padding: 2rem;
+        border-left: 8px solid var(--orange-500);
+        border-right: 8px solid var(--orange-500);
+    }
+    .shots-content{
+        gap: 4rem;
+    }
+    .shots-content h3{
+        font-size: 2.4rem;
+    }
+}
+@media (width <= 500px){
+    .shots-content{
+        flex-direction: column;
+        gap: 1.6rem;
+    }
+}
+@media (width <= 550px){
+    .cocktail-overall-table h4{
+        font-size: 1.6rem;
+    }
+    .cocktail-overall-table td:first-child{
+        padding-left: 10px;
+    }
+    .cocktail-overall-table td:last-child{
+        padding-right: 10px;
+    }
+}
+/* ----------------  Cocktail end ---------------- */
+@media (width <= 930px){
+    .snacks-list{
+        flex-direction: column;
+        justify-content: center;
+        gap: 0;
+    }
+    .snacks-item{
+        width: 100%;
+    }
+}
+@media (width <= 550px){
+    .snacks-overall-table h4{
+        font-size: 1.6rem;
+    }
+    .snacks-overall-table td:first-child{
+        padding-left: 10px;
+    }
+    .snacks-overall-table td:last-child{
+        padding-right: 10px;
+    }
+}

@@ -6,17 +6,25 @@
     <link rel="icon" href="./images/logo-orange.svg">
     <title>Latest News | Sobre</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="./js/jquery-3.7.1.js"></script>
 
+    <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/latest.css">
+    <link rel="stylesheet" href="./css/latest-rwd.css">
+    <script src="./js/base.js"></script>
 </head>
 <body>
-    <header>
+    <header class="headerScroll">
         <nav>
             <a href="./index.html"><img src="./images/logo-white_side.svg" alt="sobre-logo"></a>
             <ul>
                 <li><a href="./about.html">About</a></li>
-                <li><a href="./menu.html">Menu</a>
-                    <ol >
+                <li class="menuWithSubmenu">
+                    <a href="./menu.html">Menu</a>
+                    <div class="subMenu-expandBtn">
+                        <p class="chevron-arrow--bottom"></p>
+                    </div>
+                    <ol class="submenu">
                         <li><a href="./menu.html#coffee">Coffee</a></li>
                         <li><a href="./menu.html#bakery">Bakery</a></li>
                         <li><a href="./menu.html#cocktail">CockTails</a></li>
@@ -26,8 +34,15 @@
                 <li><a class href="./latest-news.html">Latest</a></li>
                 <li><a class href="#">Contact</a></li>            
             </ul>
+            <div id="menuHam">
+                <div class="menuHam-line line1"></div>
+                <div class="menuHam-line line2"></div>
+                <div class="menuHam-line line3"></div>
+            </div>
         </nav>
     </header>
+
+    <div id="pageOverlay"></div>
 
     <main>
         <div class="top-block"></div>
@@ -72,20 +87,17 @@
         </section>
     </main>
 
+    <div id="scrollTop" href="#top">
+        <p class="chevron-arrow--top"></p>
+    </div>
     <footer>
-            <img src="./images/logo-white_side.svg" alt="logo">
-            <ul class="footer-menu">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Latest</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <ul class="footer-social">
-                <li><a hreft="#"><i class="fa-brands fa-facebook"></i></a></li>
-                <li><a hreft="#"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a hreft="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-            </ul>
-            <p>本網站為緯育TibaMe前端工程師班第 103 期學員專題作品，本平台僅供學習、展示之用。</p>
+        <img src="./images/logo-white_side.svg" alt="logo">
+        <ul class="footer-social">
+            <li><a hreft="#"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a hreft="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a hreft="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+        </ul>
+        <p>本網站為緯育TibaMe前端工程師班學員專題作品，本平台僅供學習、展示之用。</p>
     </footer>
 
 </body>

@@ -7,16 +7,22 @@
     <title>About Us | Sobre</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+    <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/contact-rwd.css">
 </head>
 <body>
-    <header>
+    <header class="headerScroll">
         <nav>
             <a href="./index.html"><img src="./images/logo-white_side.svg" alt="sobre-logo"></a>
             <ul>
                 <li><a href="./about.html">About</a></li>
-                <li><a href="./menu.html">Menu</a>
-                    <ol >
+                <li class="menuWithSubmenu">
+                    <a href="./menu.html">Menu</a>
+                    <div class="subMenu-expandBtn">
+                        <p class="chevron-arrow--bottom"></p>
+                    </div>
+                    <ol class="submenu">
                         <li><a href="./menu.html#coffee">Coffee</a></li>
                         <li><a href="./menu.html#bakery">Bakery</a></li>
                         <li><a href="./menu.html#cocktail">CockTails</a></li>
@@ -26,33 +32,55 @@
                 <li><a class href="./latest-news.html">Latest</a></li>
                 <li><a class href="#">Contact</a></li>            
             </ul>
+            <div id="menuHam">
+                <div class="menuHam-line line1"></div>
+                <div class="menuHam-line line2"></div>
+                <div class="menuHam-line line3"></div>
+            </div>
         </nav>
     </header>
+
+    <div id="pageOverlay"></div>
 
     <main>
         <div class="top-block"></div>
         <section id="contact">
             <h2 class="main-title">CONTACT US</h2>
-            <ul>
-
-            </ul>
+            
+            <div class="form-container">
+                <form id="contact-form" action="submit_form.php" method="POST">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required><br><br>
+        
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required><br><br>
+        
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="1234567890"><br><br>
+        
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+        
+                    <label for="message">What would you like to tell us?</label>
+                    <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+        
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
         </section>
     </main>
 
+    <div id="scrollTop" href="#top">
+        <p class="chevron-arrow--top"></p>
+    </div>
     <footer>
-            <img src="./images/logo-white_side.svg" alt="logo">
-            <ul class="footer-menu">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Latest</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <ul class="footer-social">
-                <li><a hreft="#"><i class="fa-brands fa-facebook"></i></a></li>
-                <li><a hreft="#"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a hreft="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-            </ul>
-            <p>本網站為緯育TibaMe前端工程師班第 103 期學員專題作品，本平台僅供學習、展示之用。</p>
+        <img src="./images/logo-white_side.svg" alt="logo">
+        <ul class="footer-social">
+            <li><a hreft="#"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a hreft="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a hreft="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+        </ul>
+        <p>本網站為緯育TibaMe前端工程師班學員專題作品，本平台僅供學習、展示之用。</p>
     </footer>
 
 </body>
