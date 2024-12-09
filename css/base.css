@@ -315,11 +315,6 @@ footer{
     font-size: 2rem;
     color: var(--orange-50);
 }
-@media (width < 430px){
-    footer{
-        border-radius: 0;
-    }
-}
 footer img{
     height: 6rem;
     margin: 0 auto;
